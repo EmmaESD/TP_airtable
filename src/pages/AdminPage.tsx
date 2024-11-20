@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getClients } from "../utils/airtable";
 import { Clients } from "../utils/types/client";
-import ClientForm from "../components/ClientForm/ClientForm";
 import Chip from "../components/Chip/Chip";
 
 const AdminPage = () => {
@@ -17,7 +16,6 @@ const AdminPage = () => {
           {client.email} - {client.phone} - <Chip status={client.status} />
         </li>
       ))}
-      <ClientForm setClients={setClients} />
     </ul>
   );
 };

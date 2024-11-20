@@ -1,7 +1,13 @@
+import { useState } from "react";
+import ClientForm from "../components/ClientForm/ClientForm";
+import { Clients } from "../utils/types/client";
+
 const HomePage = () => {
+  const [clients, setClients] = useState<Clients>([]);
+
   return (
     <div>
-      <p>Hello home page</p>
+      <ClientForm setClients={setClients} />
     </div>
   );
 };

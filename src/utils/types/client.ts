@@ -1,7 +1,7 @@
 export enum Status {
   CONTACTED = "contacted",
-  NOT_CONTACTED = "not contacted",
-  CONTACT_IN_FUTUR = "contact in futur",
+  NOT_CONTACTED = "not_contacted",
+  CONTACT_IN_FUTUR = "in_progress",
 }
 
 export type Client = {
