@@ -9,7 +9,7 @@ export type Client = {
   firstname: string;
   lastname: string;
   email: string;
-  phone_number: string;
+  phone: string;
   notes: string;
   status: Status;
 };
@@ -19,5 +19,5 @@ export type ClientDTO = {
   firstname: string;
   lastname: string;
   email: string;
-  phone_number: string;
+  phone: string;
 };
