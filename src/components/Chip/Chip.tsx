@@ -24,8 +24,9 @@ const Chip = ({ status }: { status: Status }) => {
   return (
     <div
       style={{
-        padding: "5px",
+        padding: "3px",
         borderRadius: "30px",
+        fontSize: "8px",
         ...style,
       }}
     >

@@ -12,6 +12,7 @@ export type Client = {
   phone: string;
   notes: string;
   status: Status;
+  created_at: any;
 };
 
 export type Clients = Client[];
