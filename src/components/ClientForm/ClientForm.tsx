@@ -28,41 +28,72 @@ const ClientForm = ({
     });
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="firstname"
-        placeholder="Votre Prénom"
-        onChange={handleChange}
-        value={formData.firstname}
-        required
-      />
-      <input
-        type="text"
-        name="lastname"
-        placeholder="Votre Nom"
-        onChange={handleChange}
-        value={formData.lastname}
-        required
-      />
-      <input
-        type="text"
-        name="email"
-        placeholder="Votre email"
-        onChange={handleChange}
-        value={formData.email}
-        required
-      />
-      <input
-        type="text"
-        name="phone"
-        placeholder="Votre téléphone"
-        onChange={handleChange}
-        value={formData.phone}
-        required
-      />
-      <button type="submit">Créer</button>
-    </form>
+    <section className="flex flex-col gap-12 items-center justify-center overflow-hidden">
+      <h2 className="text-xl">Entrez vos coordonnées</h2>
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-10 items-center justify-center"
+      >
+        <div className="flex gap-4">
+          <div className="flex flex-col gap-2 ">
+            <label htmlFor="firstname">Votre prénom</label>
+            <input
+              className="bg-grey rounded-sm p-1"
+              type="text"
+              name="firstname"
+              placeholder="Prénom"
+              onChange={handleChange}
+              value={formData.firstname}
+              required
+            />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="lastname">Votre nom</label>
+            <input
+              className="bg-grey rounded-sm p-1"
+              type="text"
+              name="lastname"
+              placeholder="Votre Nom"
+              onChange={handleChange}
+              value={formData.lastname}
+              required
+            />
+          </div>
+        </div>
+        <div className="flex flex-col gap-6 items-start w-full">
+          <div className="flex flex-col gap-2 w-full">
+            <label htmlFor="email">Votre email</label>
+            <input
+              className="bg-grey rounded-sm w-full p-1"
+              type="text"
+              name="email"
+              placeholder="email"
+              onChange={handleChange}
+              value={formData.email}
+              required
+            />
+          </div>
+          <div className="flex flex-col gap-2 w-full">
+            <label htmlFor="phone">Votre téléphone</label>
+            <input
+              className="bg-grey rounded-sm w-full p-1"
+              type="text"
+              name="phone"
+              placeholder="Votre téléphone"
+              onChange={handleChange}
+              value={formData.phone}
+              required
+            />
+          </div>
+        </div>
+        <button
+          className="bg-pinkLight w-fit py-2 px-4 rounded-xl p-1"
+          type="submit"
+        >
+          Envoyer
+        </button>
+      </form>
+    </section>
   );
 };
 

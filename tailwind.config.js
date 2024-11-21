@@ -15,6 +15,14 @@ module.exports = {
       white: "#FFFFFF",
       pinkHover: "#E0C3B0",
     },
+    extend: {
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"], // définit Roboto comme police sans-serif par défaut
+      },
+      backgroundImage: {
+        phone: "url('/public/assets/phone.jpg')",
+      },
+    },
   },
   plugins: [],
 };
