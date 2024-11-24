@@ -13,13 +13,22 @@ const ClientForm = ({
     email: "",
     phone: "",
   });
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log(formData);
     createClient(formData, setClients);
+
+    // Réinitialiser les champs du formulaire après l'envoi
+    setFormData({
+      firstname: "",
+      lastname: "",
+      email: "",
+      phone: "",
+    });
   };
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value);
     setFormData((previousFormData) => {
       return {
         ...previousFormData,
@@ -27,6 +36,7 @@ const ClientForm = ({
       };
     });
   };
+
   return (
     <section className="flex flex-col gap-12 items-center justify-center overflow-hidden">
       <h2 className="text-xl">Entrez vos coordonnées</h2>
