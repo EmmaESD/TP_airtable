@@ -5,31 +5,24 @@ const Chip = ({ status }: { status: Status }) => {
   switch (status) {
     case Status.CONTACTED:
       style = {
-        backgroundColor: "green",
+        backgroundColor: "#6FD195",
         color: "white",
       };
       break;
     case Status.NOT_CONTACTED:
       style = {
-        backgroundColor: "red",
+        backgroundColor: "#FF928A",
         color: "white",
       };
       break;
     case Status.CONTACT_IN_FUTUR:
       style = {
-        backgroundColor: "blue",
+        backgroundColor: "#3CC3DF",
         color: "white",
       };
   }
   return (
-    <div
-      style={{
-        padding: "3px",
-        borderRadius: "30px",
-        fontSize: "8px",
-        ...style,
-      }}
-    >
+    <div className="p-1 rounded-md text-xs w-fit" style={style}>
       {status}
     </div>
   );
